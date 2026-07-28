@@ -13,6 +13,6 @@
 
 ## Recommended Next Actions
 
-1. Open merge request for `feat/data-models` targeting `development`.
+1. Merge `feat/data-models` into `development`.
 2. Create feature branch `feat/gemini-client` to implement Gemini 1.5 Multimodal Extraction Engine using `google-genai` SDK.
 3. Add synthetic sample patient EHR PDF in `data/` for local integration testing.
