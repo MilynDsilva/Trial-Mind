@@ -1,0 +1,46 @@
+{
+  "nct_id": "NCT05123456",
+  "title": "Phase 2 Open-Label Study of Targeted KRAS G12C Inhibitor in Advanced Non-Small Cell Lung Cancer",
+  "phase": "Phase 2",
+  "target_condition": "Non-Small Cell Lung Cancer (NSCLC)",
+  "inclusion_criteria": [
+    {
+      "id": "INC-01",
+      "rule_type": "INCLUSION",
+      "description": "Histologically confirmed Stage IV or recurrent Non-Small Cell Lung Cancer (NSCLC).",
+      "category": "Diagnosis"
+    },
+    {
+      "id": "INC-02",
+      "rule_type": "INCLUSION",
+      "description": "Documented KRAS G12C mutation in tumor tissue via NGS or PCR testing.",
+      "category": "Biomarker"
+    },
+    {
+      "id": "INC-03",
+      "rule_type": "INCLUSION",
+      "description": "Received at least one prior systemic therapy line (immunotherapy or chemotherapy).",
+      "category": "PriorTherapy"
+    },
+    {
+      "id": "INC-04",
+      "rule_type": "INCLUSION",
+      "description": "Adequate organ function: ANC >= 1,500/uL, Platelets >= 100,000/uL, eGFR >= 50 mL/min.",
+      "category": "Lab"
+    }
+  ],
+  "exclusion_criteria": [
+    {
+      "id": "EXC-01",
+      "rule_type": "EXCLUSION",
+      "description": "Active, untreated brain metastases or leptomeningeal disease.",
+      "category": "Comorbidity"
+    },
+    {
+      "id": "EXC-02",
+      "rule_type": "EXCLUSION",
+      "description": "Prior treatment with a specific KRAS G12C targeted inhibitor.",
+      "category": "PriorTherapy"
+    }
+  ]
+}
