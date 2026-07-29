@@ -1,0 +1,34 @@
+{
+  "nct_id": "NCT05221144",
+  "title": "Phase 1/2 Trial of Immunotherapy Combination in BRAF V600E Mutant Metastatic Colorectal Cancer",
+  "phase": "Phase 1/2",
+  "target_condition": "Colorectal Cancer",
+  "inclusion_criteria": [
+    {
+      "id": "INC-01",
+      "rule_type": "INCLUSION",
+      "description": "Histologically confirmed metastatic colorectal cancer with BRAF V600E mutation.",
+      "category": "Biomarker"
+    },
+    {
+      "id": "INC-02",
+      "rule_type": "INCLUSION",
+      "description": "Adequate hematologic function: ANC >= 1,500/uL, Platelets >= 100,000/uL.",
+      "category": "Lab"
+    },
+    {
+      "id": "INC-03",
+      "rule_type": "INCLUSION",
+      "description": "Adequate hepatic function: AST/ALT <= 2.5x ULN (or <= 5.0x ULN in presence of liver metastases).",
+      "category": "Lab"
+    }
+  ],
+  "exclusion_criteria": [
+    {
+      "id": "EXC-01",
+      "rule_type": "EXCLUSION",
+      "description": "Prior treatment with BRAF inhibitors (e.g. Encorafenib, Dabrafenib).",
+      "category": "PriorTherapy"
+    }
+  ]
+}
