@@ -138,9 +138,20 @@ def match(
 
 
 @app.command()
+def serve(
+    host: str = typer.Option("127.0.0.1", "--host", "-h", help="Host address to bind"),
+    port: int = typer.Option(8000, "--port", "-p", help="Port number to listen on"),
+):
+    """Launch the TrialMind FastAPI Web Dashboard."""
+    import uvicorn
+    console.print(Panel(f"[bold green]Starting TrialMind Web Dashboard at http://{host}:{port}[/bold green]", expand=False))
+    uvicorn.run("src.web.app:app", host=host, port=port, reload=True)
+
+
+@app.command()
 def version():
     """Display TrialMind version info."""
-    console.print("TrialMind Agent v0.1.0 (Phase 4: Audit & PDF Report Generator)")
+    console.print("TrialMind Agent v0.1.0 (Phase 5: Web Dashboard & Full Release)")
 
 
 if __name__ == "__main__":

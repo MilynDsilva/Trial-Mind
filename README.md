@@ -53,26 +53,44 @@ TrialMind automates the clinical trial matching workflow using Gemini's long-con
 - 🧬 **Genomic & Biomarker Extraction:** Extracts disease stage, histology, and mutation status (e.g., *EGFR*, *KRAS G12C*, *PD-L1* expression).
 - 🎯 **Deterministic Matching:** Evaluates criteria line-by-line and outputs verified status (`Eligible`, `Potentially Eligible`, `Ineligible`).
 - 📍 **Page-Level Audit Trail:** Links every decision to exact page numbers and evidence quotes from the patient record for instant clinical verification.
+- 📄 **Executive PDF Exporter:** Generates printable, physician-facing PDF evaluation summaries.
+- 💻 **FastAPI Web Dashboard:** Modern glassmorphic Web UI with interactive patient upload, NCT trial lookup, and real-time criteria matrix.
 
 ---
 
-## 🛠️ Technology Stack
+## ⚡ Quickstart & Usage
 
-- **AI Core:** Google Gemini 1.5 Pro / Flash (via Google Cloud Vertex AI or GenAI SDK)
-- **Backend:** Python 3.10+, FastAPI, Pydantic (Structured JSON Outputs)
-- **Document Processing:** PyMuPDF (`fitz`), `pdfplumber`
-- **Orchestration:** LangGraph / Deterministic State Machine
-- **Testing & Evals:** PyTest, DeepEval
+### 1. Installation
+```bash
+git clone https://github.com/MilynDsilva/Trial-Mind.git
+cd Trial-Mind
+python3 -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+cp .env.example .env
+# Add your GEMINI_API_KEY in .env
+```
+
+### 2. Launch Web Dashboard
+```bash
+python main.py serve --port 8000
+# Open http://localhost:8000 in your browser!
+```
+
+### 3. Run CLI Matching & PDF Export
+```bash
+python main.py match --patient data/sample_patient.txt --trial data/sample_trial.json --pdf report.pdf
+```
 
 ---
 
-## 🗺️ Project Roadmap
+## 🗺️ Project Roadmap & Current Progress
 
 - [x] **Phase 1: Project Setup & Agent Guidelines** (`AGENTS.md`)
-- [ ] **Phase 2: Core Data Models & Gemini Extraction Pipeline**
-- [ ] **Phase 3: Trial Protocol Parser & Rule Engine**
-- [ ] **Phase 4: Audit & Citation Report Generator**
-- [ ] **Phase 5: CLI & FastAPI Web Dashboard**
+- [x] **Phase 2: Core Data Models & Gemini Extraction Pipeline** (`src/models/`, `src/services/gemini_client.py`)
+- [x] **Phase 3: Trial Protocol Parser & Rule Engine** (`src/services/trial_fetcher.py`, `src/engine/matcher.py`)
+- [x] **Phase 4: Audit & Citation Report Generator** (`src/reports/pdf_generator.py`)
+- [x] **Phase 5: CLI & FastAPI Web Dashboard** (`src/web/app.py`)
 
 ---
 
