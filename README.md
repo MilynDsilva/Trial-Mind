@@ -66,12 +66,12 @@ TrialMind automates the clinical trial matching workflow using Gemini's long-con
 
 ---
 
-## 🗺️ Project Roadmap
+## 🗺️ Project Roadmap & Current Progress
 
 - [x] **Phase 1: Project Setup & Agent Guidelines** (`AGENTS.md`)
-- [ ] **Phase 2: Core Data Models & Gemini Extraction Pipeline**
-- [ ] **Phase 3: Trial Protocol Parser & Rule Engine**
-- [ ] **Phase 4: Audit & Citation Report Generator**
+- [x] **Phase 2: Core Data Models & Gemini Extraction Pipeline** (`src/models/`, `src/services/gemini_client.py`)
+- [x] **Phase 3: Trial Protocol Parser & Rule Engine** (`src/services/trial_fetcher.py`, `src/engine/matcher.py`)
+- [ ] **Phase 4: Audit & Citation Report Generator** (PDF Exporter & Evidence Citations)
 - [ ] **Phase 5: CLI & FastAPI Web Dashboard**
 
 ---
