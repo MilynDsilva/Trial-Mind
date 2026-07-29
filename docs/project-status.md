@@ -4,14 +4,14 @@
 
 | Metric | Status |
 | :--- | :--- |
-| **Overall Progress** | **75% Complete** (Phases 1, 2, 3, 4 Complete) |
-| **Active Phase** | Phase 5: UI Dashboard & PDF Exporter |
-| **Active Branch** | `feat/trial-matcher` |
+| **Overall Progress** | **90% Complete** (Phases 1, 2, 3, 4 Complete) |
+| **Active Phase** | Phase 5: FastAPI Web Dashboard & Evaluation Suite |
+| **Active Branch** | `feat/pdf-reports` |
 | **Target Integration Branch** | `development` |
 | **Master Tracking Sheet** | [`docs/TRACKING.md`](TRACKING.md) |
 
 ```
-[██████████████████████████████░░░░░░░░░] 75% Completed
+[████████████████████████████████████░░░] 90% Completed
 ```
 
 ---
@@ -27,12 +27,12 @@
 - ✅ ClinicalTrials.gov Protocol Fetcher (`src/services/trial_fetcher.py`).
 - ✅ Deterministic Matching Engine (`src/engine/matcher.py`).
 - ✅ Synthetic sample trial protocol JSON (`data/sample_trial.json`).
-- ✅ CLI Tooling with `extract` and `match` commands in `main.py`.
+- ✅ Executive PDF Report Generator (`src/reports/pdf_generator.py`).
+- ✅ CLI Tooling with `extract`, `match`, and `--pdf` export in `main.py`.
 
 ---
 
 ## 🔴 WHAT IS LEFT
-- ❌ **PDF Report Exporter:** Generate printable physician-facing PDF reports.
 - ❌ **Web Dashboard:** FastAPI + HTML visual interface for trial matching.
 - ❌ **Test Suite & Evals:** Automated unit tests (PyTest) and accuracy evaluation framework.
 
