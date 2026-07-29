@@ -1,18 +1,36 @@
-# Project Status & Roadmap
+# 📊 TrialMind Project Status & Progress Dashboard
 
-## Current Phase: Phase 2 - Core Data Models & Schema Implementation
+## 📈 Overall Progress Metrics
 
-- **Status:** In Progress
-- **Active Branch:** `feat/data-models`
-- **Recent Deliveries:**
-  - Initialized repository and connected to GitHub origin (`main` & `development`).
-  - Added `AGENTS.md` repository contribution guidelines.
-  - Updated `README.md` with complete TrialMind project vision, architecture, and tech stack.
-  - Added Pydantic schemas in `src/models/` for `PatientRecord`, `TrialProtocol`, and `MatchReport`.
-  - Created `requirements.txt`, `.env.example`, `.gitignore`, and `main.py` CLI runner.
+| Metric | Status |
+| :--- | :--- |
+| **Overall Progress** | **25% Complete** (Phase 1 Complete, Phase 2 In Progress) |
+| **Active Phase** | Phase 2: Core Data Models & Schema Implementation |
+| **Active Branch** | `docs/progress-tracking` |
+| **Target Integration Branch** | `development` |
+| **Tracking Sheet** | [`docs/TRACKING.md`](TRACKING.md) |
 
-## Recommended Next Actions
+```
+[██████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░] 25% Completed
+```
 
-1. Merge `feat/data-models` into `development`.
-2. Create feature branch `feat/gemini-client` to implement Gemini 1.5 Multimodal Extraction Engine using `google-genai` SDK.
-3. Add synthetic sample patient EHR PDF in `data/` for local integration testing.
+---
+
+## 🟢 WHAT IS DONE
+- ✅ Git repo, GitHub origin, `main` and `development` branches configured.
+- ✅ `AGENTS.md` rules (branch names, strict commit format, human-only merge policy, progress tracking).
+- ✅ `README.md` full architecture, problem statement, and roadmap.
+- ✅ `requirements.txt`, `.env.example`, `.gitignore`, `main.py` CLI baseline.
+- ✅ Pydantic models for Patient EHR (`src/models/patient.py`), Trial Protocols (`src/models/trial.py`), and Match Reports (`src/models/match.py`).
+
+---
+
+## 🔴 WHAT IS LEFT
+- ❌ **CLI Parser:** Complete command-line arguments using Typer (`--patient`, `--trial`, `--output`).
+- ❌ **Gemini Multimodal Client (`src/services/gemini_client.py`):** Ingest patient PDFs using Gemini 1.5 Vision and output `PatientRecord` JSON.
+- ❌ **ClinicalTrials.gov Fetcher (`src/services/trial_fetcher.py`):** Download trial criteria by NCT ID.
+- ❌ **Deterministic Matcher (`src/engine/matcher.py`):** Match patient features against inclusion/exclusion rules.
+- ❌ **Citation & Report Generator:** Output page-level citations and PDF summaries.
+- ❌ **Web Dashboard & Evals:** FastAPI UI and test suite.
+
+See detailed itemized breakdown in [`docs/TRACKING.md`](TRACKING.md).

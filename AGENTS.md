@@ -3,12 +3,22 @@
 These instructions apply to every agent and contributor working in this
 repository.
 
-## Protected branches
+## Protected branches & Merge Rules
 
-- Never commit or push directly to `development`, `main`, or `master`.
+- **Never commit or push directly** to `development`, `main`, or `master`.
+- **Never perform local branch merges** into protected branches. All merges must be performed by human maintainers on GitHub via Pull/Merge Requests.
 - Treat `development` as the integration branch and the starting point for all
   work.
 - Submit completed work to `development` through a merge request.
+
+## Progress & Status Tracking
+
+- Agents must maintain real-time progress metrics in `docs/project-status.md`.
+- Every task update must specify:
+  - Total project progress percentage (% done / % pending).
+  - Completed milestone deliverables.
+  - Active phase and current branch.
+  - Recommended next actionable items.
 
 ## Starting work
 
@@ -83,4 +93,4 @@ chore/CICD: Add pipeline lint job
 - Run the relevant tests, linting, and formatting checks.
 - Report any checks that could not be run.
 - Push only the feature branch, never a protected branch.
-- Open a merge request targeting `development`.
+- Open a merge request targeting `development` for human maintainer review.
