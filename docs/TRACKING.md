@@ -1,7 +1,7 @@
 # 📊 TrialMind Master Project Tracking Sheet
 
 Last Updated: `2026-07-29`  
-Overall Progress: **75% Complete**  
+Overall Progress: **90% Complete**  
 
 ---
 
@@ -14,7 +14,7 @@ Overall Progress: **75% Complete**
 - [x] **Project Vision (`README.md`):** Comprehensive problem statement, architecture flow diagram, feature set, tech stack, and license.
 
 ### Phase 2: Data Schemas & CLI Foundation (100% DONE)
-- [x] **Project Config:** `requirements.txt` (`google-genai`, `pydantic`, `rich`, `typer`), `.env.example`, `.gitignore`.
+- [x] **Project Config:** `requirements.txt` (`google-genai`, `pydantic`, `rich`, `typer`, `reportlab`), `.env.example`, `.gitignore`.
 - [x] **Patient EHR Schemas (`src/models/patient.py`):** `PatientRecord`, `Demographics`, `Diagnosis`, `Biomarker`, `LabResult`, `TreatmentHistory`.
 - [x] **Trial Protocol Schemas (`src/models/trial.py`):** `TrialProtocol`, `Criterion`.
 - [x] **Match Result Schemas (`src/models/match.py`):** `MatchReport`, `MatchStatus`, `CriterionEvaluation`.
@@ -25,19 +25,19 @@ Overall Progress: **75% Complete**
 - [x] **Synthetic Sample EHR (`data/sample_patient.txt`):** De-identified oncology patient record for integration testing.
 - [x] **Structured JSON Extraction:** Converts unstructured medical notes/PDFs directly into validated `PatientRecord` model.
 
-### Phase 4: Trial Protocol Parser & Rule Engine (100% DONE)
+### Phase 4: Audit & Citation Report Generator (100% DONE)
 - [x] **ClinicalTrials.gov Fetcher (`src/services/trial_fetcher.py`):** Fetches live trial protocols by NCT ID or loads local protocol JSON files.
 - [x] **Deterministic Matcher (`src/engine/matcher.py`):** Line-by-line AI evaluation comparing patient features against inclusion/exclusion criteria.
 - [x] **Synthetic Sample Trial Protocol (`data/sample_trial.json`):** Phase 2 study protocol of targeted KRAS G12C inhibitor in advanced NSCLC.
+- [x] **PDF Report Generator (`src/reports/pdf_generator.py`):** Generates executive, printable physician PDF reports with line-level evidence quotes and page citations.
+- [x] **CLI PDF Exporter (`main.py --pdf report.pdf`):** Exports match evaluation directly to PDF.
 
 ---
 
 ## 🔴 WHAT IS LEFT (Pending Tasks)
 
-### Phase 5: Audit Citation & UI Dashboard (0% Done)
-- [ ] **Citation Generator:** Include page-level citations and evidence quotes in `MatchReport`.
-- [ ] **PDF Report Export:** Generate printable physician-facing PDF reports.
-- [ ] **Web Dashboard:** FastAPI + Next.js/HTML visual interface for matching.
+### Phase 5: FastAPI Web Dashboard & Evals (0% Done)
+- [ ] **Web Dashboard:** FastAPI + HTML visual interface for matching.
 - [ ] **Test Suite & Evals:** Automated unit tests (PyTest) and accuracy evaluation framework.
 
 ---
@@ -49,6 +49,6 @@ Overall Progress: **75% Complete**
 | **Phase 1: Setup & Docs** | 4 | 4 | 0 | **100%** |
 | **Phase 2: Schemas & CLI** | 5 | 5 | 0 | **100%** |
 | **Phase 3: Gemini Engine** | 3 | 3 | 0 | **100%** |
-| **Phase 4: Rule Engine** | 3 | 3 | 0 | **100%** |
-| **Phase 5: UI & Evals** | 4 | 0 | 4 | **0%** |
-| **TOTAL PROJECT** | **19** | **15** | **4** | **79% of core components** |
+| **Phase 4: Matcher & PDF** | 5 | 5 | 0 | **100%** |
+| **Phase 5: Web UI & Evals** | 2 | 0 | 2 | **0%** |
+| **TOTAL PROJECT** | **19** | **17** | **2** | **90% of core components** |

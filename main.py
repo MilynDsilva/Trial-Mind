@@ -65,6 +65,7 @@ def match(
     trial: str = typer.Option(..., "--trial", "-t", help="Path to trial protocol JSON file or NCT ID (e.g. NCT05123456)"),
     model: str = typer.Option("gemini-1.5-flash", "--model", "-m", help="Gemini model to use"),
     output: str = typer.Option(None, "--output", "-o", help="Optional output path for MatchReport JSON"),
+    pdf: str = typer.Option(None, "--pdf", help="Optional path to export executive PDF report (e.g. report.pdf)"),
 ):
     """Match patient medical record against a clinical trial protocol."""
     console.print(Panel("[bold cyan]TrialMind Clinical Trial Matching Engine[/bold cyan]", expand=False))
@@ -77,6 +78,7 @@ def match(
     from src.services.gemini_client import GeminiExtractor
     from src.services.trial_fetcher import TrialFetcher
     from src.engine.matcher import ClinicalTrialMatcher
+    from src.reports.pdf_generator import PDFReportExporter
 
     # 1. Extract Patient Record
     console.print(f"Extracting patient profile from: [cyan]{patient}[/cyan]...")
@@ -130,11 +132,15 @@ def match(
             f.write(formatted_json)
         console.print(f"\nSaved MatchReport JSON to [cyan]{output}[/cyan]")
 
+    if pdf:
+        pdf_file = PDFReportExporter.generate_pdf(report, patient_record, trial_protocol, pdf)
+        console.print(f"\n[bold green]📄 Generated PDF Report:[/bold green] [cyan]{pdf_file}[/cyan]")
+
 
 @app.command()
 def version():
     """Display TrialMind version info."""
-    console.print("TrialMind Agent v0.1.0 (Phase 4: Clinical Trial Matcher)")
+    console.print("TrialMind Agent v0.1.0 (Phase 4: Audit & PDF Report Generator)")
 
 
 if __name__ == "__main__":
