@@ -1,7 +1,7 @@
 # 📊 TrialMind Master Project Tracking Sheet
 
 Last Updated: `2026-07-29`  
-Overall Progress: **50% Complete**  
+Overall Progress: **75% Complete**  
 
 ---
 
@@ -18,23 +18,21 @@ Overall Progress: **50% Complete**
 - [x] **Patient EHR Schemas (`src/models/patient.py`):** `PatientRecord`, `Demographics`, `Diagnosis`, `Biomarker`, `LabResult`, `TreatmentHistory`.
 - [x] **Trial Protocol Schemas (`src/models/trial.py`):** `TrialProtocol`, `Criterion`.
 - [x] **Match Result Schemas (`src/models/match.py`):** `MatchReport`, `MatchStatus`, `CriterionEvaluation`.
-- [x] **CLI Tooling (`main.py`):** Full Typer CLI implementation with `extract` command.
+- [x] **CLI Tooling (`main.py`):** Full Typer CLI implementation with `extract` and `match` commands.
 
-### Phase 3: Gemini Multimodal Extraction Engine (75% DONE)
+### Phase 3: Gemini Multimodal Extraction Engine (100% DONE)
 - [x] **Gemini API Service (`src/services/gemini_client.py`):** Multimodal extractor using Google GenAI SDK and Gemini 1.5.
 - [x] **Synthetic Sample EHR (`data/sample_patient.txt`):** De-identified oncology patient record for integration testing.
 - [x] **Structured JSON Extraction:** Converts unstructured medical notes/PDFs directly into validated `PatientRecord` model.
 
+### Phase 4: Trial Protocol Parser & Rule Engine (100% DONE)
+- [x] **ClinicalTrials.gov Fetcher (`src/services/trial_fetcher.py`):** Fetches live trial protocols by NCT ID or loads local protocol JSON files.
+- [x] **Deterministic Matcher (`src/engine/matcher.py`):** Line-by-line AI evaluation comparing patient features against inclusion/exclusion criteria.
+- [x] **Synthetic Sample Trial Protocol (`data/sample_trial.json`):** Phase 2 study protocol of targeted KRAS G12C inhibitor in advanced NSCLC.
+
 ---
 
 ## 🔴 WHAT IS LEFT (Pending Tasks)
-
-### Phase 3 Remaining (25% Left)
-- [ ] **PHI Anonymizer Service (`src/services/anonymizer.py`):** Pre-processor to strip explicit names/dates prior to LLM processing.
-
-### Phase 4: Trial Protocol Parser & Rule Engine (0% Done)
-- [ ] **ClinicalTrials.gov Fetcher (`src/services/trial_fetcher.py`):** Fetch live trial protocols by NCT ID.
-- [ ] **Deterministic Matcher (`src/engine/matcher.py`):** Line-by-line comparison of patient features against inclusion/exclusion criteria.
 
 ### Phase 5: Audit Citation & UI Dashboard (0% Done)
 - [ ] **Citation Generator:** Include page-level citations and evidence quotes in `MatchReport`.
@@ -50,7 +48,7 @@ Overall Progress: **50% Complete**
 | :--- | :--- | :--- | :--- | :--- |
 | **Phase 1: Setup & Docs** | 4 | 4 | 0 | **100%** |
 | **Phase 2: Schemas & CLI** | 5 | 5 | 0 | **100%** |
-| **Phase 3: Gemini Engine** | 4 | 3 | 1 | **75%** |
-| **Phase 4: Rule Engine** | 2 | 0 | 2 | **0%** |
+| **Phase 3: Gemini Engine** | 3 | 3 | 0 | **100%** |
+| **Phase 4: Rule Engine** | 3 | 3 | 0 | **100%** |
 | **Phase 5: UI & Evals** | 4 | 0 | 4 | **0%** |
-| **TOTAL PROJECT** | **19** | **12** | **7** | **63% of core components** |
+| **TOTAL PROJECT** | **19** | **15** | **4** | **79% of core components** |

@@ -4,14 +4,14 @@
 
 | Metric | Status |
 | :--- | :--- |
-| **Overall Progress** | **50% Complete** (Phase 1 & 2 Complete, Phase 3 In Progress) |
-| **Active Phase** | Phase 3: Gemini Multimodal Extraction Engine |
-| **Active Branch** | `feat/gemini-client` |
+| **Overall Progress** | **75% Complete** (Phases 1, 2, 3, 4 Complete) |
+| **Active Phase** | Phase 5: UI Dashboard & PDF Exporter |
+| **Active Branch** | `feat/trial-matcher` |
 | **Target Integration Branch** | `development` |
 | **Master Tracking Sheet** | [`docs/TRACKING.md`](TRACKING.md) |
 
 ```
-[████████████████████░░░░░░░░░░░░░░░░░░░] 50% Completed
+[██████████████████████████████░░░░░░░░░] 75% Completed
 ```
 
 ---
@@ -24,15 +24,16 @@
 - ✅ Pydantic models in `src/models/` (`PatientRecord`, `TrialProtocol`, `MatchReport`).
 - ✅ Gemini Multimodal Extraction Service (`src/services/gemini_client.py`).
 - ✅ Synthetic sample patient medical record (`data/sample_patient.txt`).
-- ✅ CLI Tooling with `extract` command in `main.py`.
+- ✅ ClinicalTrials.gov Protocol Fetcher (`src/services/trial_fetcher.py`).
+- ✅ Deterministic Matching Engine (`src/engine/matcher.py`).
+- ✅ Synthetic sample trial protocol JSON (`data/sample_trial.json`).
+- ✅ CLI Tooling with `extract` and `match` commands in `main.py`.
 
 ---
 
 ## 🔴 WHAT IS LEFT
-- ❌ **PHI Anonymizer Service (`src/services/anonymizer.py`):** Pre-processor to strip explicit names/dates.
-- ❌ **ClinicalTrials.gov Fetcher (`src/services/trial_fetcher.py`):** Download trial criteria by NCT ID.
-- ❌ **Deterministic Matcher (`src/engine/matcher.py`):** Match patient features against inclusion/exclusion rules.
-- ❌ **Citation & Report Exporter:** Output page-level citations and PDF summaries.
-- ❌ **Web Dashboard & Evals:** FastAPI UI and test suite.
+- ❌ **PDF Report Exporter:** Generate printable physician-facing PDF reports.
+- ❌ **Web Dashboard:** FastAPI + HTML visual interface for trial matching.
+- ❌ **Test Suite & Evals:** Automated unit tests (PyTest) and accuracy evaluation framework.
 
 See detailed itemized breakdown in [`docs/TRACKING.md`](TRACKING.md).
