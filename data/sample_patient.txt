@@ -1,0 +1,35 @@
+--- CLINICAL ONCOLOGY PROGRESS NOTE ---
+Patient ID: ANON-NSCLC-2024-001
+Date of Visit: 2024-05-14
+Attending Oncologist: Dr. Jane Doe, MD
+
+PATIENT DEMOGRAPHICS:
+Age: 62
+Gender: Male
+
+DIAGNOSIS & HISTOLOGY:
+Patient is a 62-year-old male diagnosed with Stage IV Non-Small Cell Lung Cancer (NSCLC), Adenocarcinoma subtype. Initial diagnosis established on 2023-11-10.
+
+GENOMIC & BIOMARKER PROFILE:
+Next-Generation Sequencing (NGS) panel completed on 2023-11-20:
+- KRAS: Positive for G12C mutation (Exon 2)
+- EGFR: Wild-type (Negative for Exon 19 del / L858R)
+- ALK: Negative / Non-rearranged
+- PD-L1 Expression (IHC 22C3): 65% Tumor Proportion Score (High)
+
+LABORATORY RESULTS (2024-05-10):
+- Absolute Neutrophil Count (ANC): 2,400 /uL (Normal)
+- Platelet Count: 210,000 /uL (Normal)
+- Estimated GFR (eGFR): 78 mL/min/1.73m2 (Normal)
+- ALT (SGPT): 28 U/L (Normal)
+- AST (SGOT): 32 U/L (Normal)
+
+PRIOR TREATMENTS:
+1. First-line therapy: Pembrolizumab (Keytruda) 200mg IV q3w initiated 2023-12-01. Discontinued on 2024-04-15 due to disease progression (new hepatic lesions on CT).
+
+COMORBIDITIES & MEDICAL HISTORY:
+- Essential Hypertension (controlled on Amlodipine 5mg daily)
+- No evidence of active brain metastases (Brain MRI clear on 2024-04-28).
+
+PLAN & CLINICAL RECOMMENDATIONS:
+Discontinue first-line immunotherapy. Evaluate eligibility for Phase 2 targeted KRAS G12C inhibitor clinical trials.

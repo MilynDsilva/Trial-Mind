@@ -1,7 +1,7 @@
 # 📊 TrialMind Master Project Tracking Sheet
 
 Last Updated: `2026-07-29`  
-Overall Progress: **25% Complete**  
+Overall Progress: **50% Complete**  
 
 ---
 
@@ -13,25 +13,24 @@ Overall Progress: **25% Complete**
 - [x] **Agent Rules (`AGENTS.md`):** Strict conventions for branch names (`feat/`, `docs/`, `fix/`), commit messages (`<type>/<Scope>: <description>`), maintainer-only merge rules, and progress tracking requirements.
 - [x] **Project Vision (`README.md`):** Comprehensive problem statement, architecture flow diagram, feature set, tech stack, and license.
 
-### Phase 2: Data Schemas & CLI Foundation (60% DONE)
+### Phase 2: Data Schemas & CLI Foundation (100% DONE)
 - [x] **Project Config:** `requirements.txt` (`google-genai`, `pydantic`, `rich`, `typer`), `.env.example`, `.gitignore`.
 - [x] **Patient EHR Schemas (`src/models/patient.py`):** `PatientRecord`, `Demographics`, `Diagnosis`, `Biomarker`, `LabResult`, `TreatmentHistory`.
 - [x] **Trial Protocol Schemas (`src/models/trial.py`):** `TrialProtocol`, `Criterion`.
 - [x] **Match Result Schemas (`src/models/match.py`):** `MatchReport`, `MatchStatus`, `CriterionEvaluation`.
-- [x] **Baseline CLI (`main.py`):** Rich terminal output and environment check.
+- [x] **CLI Tooling (`main.py`):** Full Typer CLI implementation with `extract` command.
+
+### Phase 3: Gemini Multimodal Extraction Engine (75% DONE)
+- [x] **Gemini API Service (`src/services/gemini_client.py`):** Multimodal extractor using Google GenAI SDK and Gemini 1.5.
+- [x] **Synthetic Sample EHR (`data/sample_patient.txt`):** De-identified oncology patient record for integration testing.
+- [x] **Structured JSON Extraction:** Converts unstructured medical notes/PDFs directly into validated `PatientRecord` model.
 
 ---
 
 ## 🔴 WHAT IS LEFT (Pending Tasks)
 
-### Phase 2 Remaining (40% Left)
-- [ ] **CLI Argument Parser:** Implement full command-line interface with `typer` (`--patient`, `--trial`, `--output`).
-
-### Phase 3: Gemini Multimodal Extraction Engine (0% Done)
-- [ ] **Gemini API Service (`src/services/gemini_client.py`):** Integration with `google-genai` SDK for Gemini 1.5 Pro & Flash.
-- [ ] **PHI De-Identification Layer:** Anonymization pre-processor for patient charts.
-- [ ] **EHR PDF Extractor:** Ingest scanned PDFs / image reports using Gemini Vision and return `PatientRecord` JSON.
-- [ ] **Sample Data (`data/sample_patient.pdf`):** Synthetic test medical record for local integration testing.
+### Phase 3 Remaining (25% Left)
+- [ ] **PHI Anonymizer Service (`src/services/anonymizer.py`):** Pre-processor to strip explicit names/dates prior to LLM processing.
 
 ### Phase 4: Trial Protocol Parser & Rule Engine (0% Done)
 - [ ] **ClinicalTrials.gov Fetcher (`src/services/trial_fetcher.py`):** Fetch live trial protocols by NCT ID.
@@ -50,8 +49,8 @@ Overall Progress: **25% Complete**
 | Category | Total Tasks | Completed | Pending | Completion % |
 | :--- | :--- | :--- | :--- | :--- |
 | **Phase 1: Setup & Docs** | 4 | 4 | 0 | **100%** |
-| **Phase 2: Schemas & CLI** | 6 | 5 | 1 | **83%** |
-| **Phase 3: Gemini Engine** | 4 | 0 | 4 | **0%** |
-| **Phase 4: Rule Engine** | 3 | 0 | 3 | **0%** |
+| **Phase 2: Schemas & CLI** | 5 | 5 | 0 | **100%** |
+| **Phase 3: Gemini Engine** | 4 | 3 | 1 | **75%** |
+| **Phase 4: Rule Engine** | 2 | 0 | 2 | **0%** |
 | **Phase 5: UI & Evals** | 4 | 0 | 4 | **0%** |
-| **TOTAL PROJECT** | **21** | **9** | **12** | **43% of core components** |
+| **TOTAL PROJECT** | **19** | **12** | **7** | **63% of core components** |
