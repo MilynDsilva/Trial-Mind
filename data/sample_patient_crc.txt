@@ -1,0 +1,26 @@
+--- CLINICAL ONCOLOGY PROGRESS NOTE ---
+Patient ID: ANON-CRC-2024-003
+Date of Visit: 2024-05-20
+Attending Oncologist: Dr. Michael Chang, MD
+
+PATIENT DEMOGRAPHICS:
+Age: 68
+Gender: Male
+
+DIAGNOSIS & HISTOLOGY:
+Metastatic Colorectal Cancer (mCRC), Stage IV with active extensive liver metastases.
+
+BIOMARKER PROFILE:
+- Microsatellite Status: MSS (Microsatellite Stable)
+- KRAS: Wild-type
+- BRAF: V600E Mutation Positive
+
+LABORATORY RESULTS (2024-05-18):
+- Absolute Neutrophil Count (ANC): 1,100 /uL (Low - Grade 2 Neutropenia)
+- Platelet Count: 85,000 /uL (Low - Thrombocytopenia)
+- AST: 110 U/L (Elevated > 2.5x ULN)
+- ALT: 95 U/L (Elevated > 2.5x ULN)
+
+PRIOR TREATMENTS:
+- FOLFIRI + Cetuximab (discontinued 2024-04-10 due to disease progression).
+- Previously treated with Encorafenib + Cetuximab.

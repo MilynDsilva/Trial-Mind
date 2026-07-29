@@ -1,0 +1,30 @@
+--- CLINICAL ONCOLOGY PROGRESS NOTE ---
+Patient ID: ANON-BRCA-2024-002
+Date of Visit: 2024-06-01
+Attending Oncologist: Dr. Robert Smith, MD
+
+PATIENT DEMOGRAPHICS:
+Age: 54
+Gender: Female
+
+DIAGNOSIS & HISTOLOGY:
+Patient is a 54-year-old female diagnosed with Invasive Ductal Carcinoma of the Left Breast, Stage III. Initial diagnosis: 2024-01-15.
+
+BIOMARKER PROFILE:
+- HER2/neu: Positive (IHC 3+ score)
+- Estrogen Receptor (ER): Positive (80% expression)
+- Progesterone Receptor (PR): Positive (45% expression)
+- BRCA1/BRCA2: Wild-type / Negative
+
+LABORATORY RESULTS (2024-05-25):
+- Absolute Neutrophil Count (ANC): 3,100 /uL (Normal)
+- Platelet Count: 240,000 /uL (Normal)
+- Left Ventricular Ejection Fraction (LVEF): Not assessed in last 90 days (ECHO pending)
+- Total Bilirubin: 0.8 mg/dL (Normal)
+
+PRIOR TREATMENTS:
+- Completed neoadjuvant AC-T chemotherapy (Doxorubicin, Cyclophosphamide, Paclitaxel) on 2024-04-30.
+- Lumpectomy completed 2024-05-15.
+
+COMORBIDITIES:
+- Mild Osteopenia. No history of congestive heart failure.
